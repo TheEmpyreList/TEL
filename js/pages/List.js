@@ -120,9 +120,6 @@ export default {
                     <p>
                         Do not use easy modes or too heavy ldm, only a record of the unmodified level qualifies.
                     </p>
-                    <p>
-                        Once a level falls onto the Legacy List, we accept records for it.
-                    </p>
                 </div>
             </div>
         </main>

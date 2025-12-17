@@ -1,6 +1,6 @@
 export default {
     props: {
-        publisher: {
+        author: {
             type: String,
             required: true,
         },
@@ -14,17 +14,17 @@ export default {
         },
     },
     template: `
-        <div class="level-publishers">
+        <div class="level-authors">
             <template v-if="selfVerified">
                 <div class="type-title-sm">Creator & Verifier</div>
                 <p class="type-body">
-                    <span>{{ publisher }}</span>
+                    <span>{{ author }}</span>
                 </p>
             </template>
             <template v-else-if="creators.length === 0">
                 <div class="type-title-sm">Creator</div>
                 <p class="type-body">
-                    <span>{{ publisher }}</span>
+                    <span>{{ author }}</span>
                 </p>
                 <div class="type-title-sm">Verifier</div>
                 <p class="type-body">
@@ -44,16 +44,16 @@ export default {
                     <span>{{ verifier }}</span>
                 </p>
             </template>
-            <div class="type-title-sm">Publisher</div>
+            <div class="type-title-sm">author</div>
             <p class="type-body">
-                <span>{{ publisher }}</span>
+                <span>{{ author }}</span>
             </p>
         </div>
     `,
 
     computed: {
         selfVerified() {
-            return this.publisher === this.verifier && this.creators.length === 0;
+            return this.author === this.verifier && this.creators.length === 0;
         },
     },
 };
